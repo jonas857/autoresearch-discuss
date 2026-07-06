@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stateful Value-Signal Research Loop：/autoresearch H1-H3 综合框架报告</title>
+  <style>
+    :root { --ink:#111827; --muted:#64748b; --blue:#4f46e5; --green:#16a34a; --amber:#d97706; --bg:#f8fafc; --card:#fff; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif; line-height: 1.68; color: var(--ink); background: var(--bg); }
+    main { max-width: 1180px; margin: 0 auto; padding: 46px 28px 96px; }
+    .hero { border-radius: 30px; padding: 46px; color: white; background: radial-gradient(circle at 8% 0%, #818cf8, #312e81 42%, #111827 100%); box-shadow: 0 28px 80px rgba(15,23,42,.24); }
+    .hero h1 { margin: 0 0 14px; font-size: 38px; line-height: 1.15; letter-spacing: -0.02em; }
+    .hero p { margin: 0; max-width: 920px; color: #dbeafe; font-size: 18px; }
+    .pill { display: inline-block; margin: 20px 8px 0 0; padding: 6px 12px; border-radius: 999px; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.22); color: white; font-size: 13px; }
+    h2 { margin: 42px 0 14px; font-size: 27px; letter-spacing: -0.01em; }
+    h3 { margin: 0 0 8px; }
+    .card { background: var(--card); border: 1px solid #e5e7eb; border-radius: 22px; padding: 24px 26px; box-shadow: 0 12px 38px rgba(15,23,42,.06); margin: 16px 0; }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+    .grid2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .metric { font-size: 38px; font-weight: 850; color: var(--blue); line-height: 1; }
+    .small { color: var(--muted); font-size: 14px; margin-top: 8px; }
+    table { width: 100%; border-collapse: collapse; background: white; border-radius: 18px; overflow: hidden; box-shadow: 0 12px 34px rgba(15,23,42,.05); }
+    th,td { border-bottom: 1px solid #e5e7eb; padding: 12px 14px; text-align: left; vertical-align: top; }
+    th { background: #eef2ff; color: #1e1b4b; }
+    code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    pre { background: #0f172a; color: #dbeafe; border-radius: 18px; padding: 22px; overflow-x: auto; }
+    .ok { border-left: 6px solid var(--green); background: #f0fdf4; }
+    .warn { border-left: 6px solid var(--amber); background: #fffbeb; }
+    .diagram { text-align:center; padding: 22px; }
+    .node { display:inline-block; padding:12px 16px; border-radius:14px; background:#eef2ff; color:#312e81; margin:7px; font-weight:700; }
+    .arrow { color:#64748b; font-size:22px; margin:0 2px; }
+    ul { margin-top: 8px; }
+    @media (max-width: 900px) { .grid, .grid2 { grid-template-columns: 1fr; } .hero { padding: 30px 24px; } .hero h1 { font-size: 30px; } }
+  </style>
+</head>
+<body>
+<main>
+  <section class="hero">
+    <h1>Stateful Value-Signal Research Loop</h1>
+    <p>/autoresearch H1-H3 综合框架报告：长期 AI 研究技能应被设计为“状态化价值信号研究循环”，而不是普通命令执行器。</p>
+    <span class="pill">H1 Supported: Artifact Interfaces</span>
+    <span class="pill">H2 Supported: Value-Signal Exchange</span>
+    <span class="pill">H3 Supported: Epistemic Loop Separation</span>
+    <span class="pill">2026-07-06</span>
+  </section>
+
+  <h2>1. 一句话结论</h2>
+  <div class="card ok">
+    <h3>/autoresearch 的核心机制</h3>
+    <p><strong>人类生产价值信号，AI 生产状态化研究 artifact；内循环生产证据，外循环生产意义；人类通过报告消费意义并更新价值信号。</strong></p>
+  </div>
+
+  <div class="diagram card">
+    <span class="node">Human Value Signal</span><span class="arrow">→</span>
+    <span class="node">AI Evidence Production</span><span class="arrow">→</span>
+    <span class="node">AI Meaning Synthesis</span><span class="arrow">→</span>
+    <span class="node">Human Governance</span><span class="arrow">→</span>
+    <span class="node">Updated Priorities</span>
+  </div>
+
+  <h2>2. 三个已支持假设</h2>
+  <div class="grid">
+    <div class="card">
+      <div class="metric">H1</div>
+      <h3>Artifact 是消费者界面</h3>
+      <p>文件不是被动存储，而是给不同消费者使用的界面。每个 artifact 应说明消费者、压缩级别、决策功能和缺失后果。</p>
+    </div>
+    <div class="card">
+      <div class="metric">H2</div>
+      <h3>人机协作是价值信号交换</h3>
+      <p>人类主要生产目标、约束和成功标准；AI 主要生产状态、证据、综合、选项和报告。</p>
+    </div>
+    <div class="card">
+      <div class="metric">H3</div>
+      <h3>双循环分离证据与意义</h3>
+      <p>内循环生产局部证据，外循环生产全局解释和方向决策，人类循环更新价值信号。</p>
+    </div>
+  </div>
+
+  <h2>3. H1：Artifact Interface Map</h2>
+  <table>
+    <thead><tr><th>Artifact</th><th>主要消费者</th><th>压缩层级</th><th>支持的决策/能力</th></tr></thead>
+    <tbody>
+      <tr><td><code>research-state.yaml</code></td><td>AI</td><td>Operational</td><td>恢复工作、选择下一步</td></tr>
+      <tr><td><code>research-log.md</code></td><td>AI + 人类审计者</td><td>Trace</td><td>解释为什么做过这些决策</td></tr>
+      <tr><td><code>findings.md</code></td><td>AI + 人类</td><td>Synthesis</td><td>形成当前理解，避免重复错误</td></tr>
+      <tr><td><code>experiments/</code></td><td>AI + 复现者</td><td>Evidence</td><td>保存协议、结果、分析，支持复现</td></tr>
+      <tr><td><code>literature/</code></td><td>AI + 论文写作者</td><td>Grounding</td><td>连接外部知识和引用依据</td></tr>
+      <tr><td><code>to_human/</code></td><td>人类</td><td>Governance</td><td>让人进行低频高层校准</td></tr>
+      <tr><td><code>paper/</code></td><td>传播/发表受众</td><td>Final Narrative</td><td>封装最终贡献</td></tr>
+    </tbody>
+  </table>
+
+  <h2>4. H2：价值信号交换，而不是命令传递</h2>
+  <div class="grid2">
+    <div class="card">
+      <h3>人类应生产</h3>
+      <ul>
+        <li>Objective：研究目标</li>
+        <li>Audience：目标读者/使用者</li>
+        <li>Success criteria：什么算有用</li>
+        <li>Constraints：资源、风险、范围</li>
+        <li>Feedback cadence：何时介入</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>AI 应生产</h3>
+      <ul>
+        <li>State updates：当前状态</li>
+        <li>Evidence packages：证据包</li>
+        <li>Synthesis：综合发现</li>
+        <li>Decision options：可选方向</li>
+        <li>Reports：人类治理报告</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card warn">
+    <h3>核心原则：Control by value function, not by step-by-step procedure.</h3>
+    <p>人类通过价值函数控制方向，而不是通过逐步命令控制过程。这样既保留人类责任，又避免人类成为长期研究的瓶颈。</p>
+  </div>
+
+  <h2>5. H3：认识论循环分工</h2>
+  <table>
+    <thead><tr><th>循环</th><th>功能</th><th>主要产物</th><th>弱化时的失败模式</th></tr></thead>
+    <tbody>
+      <tr><td>Inner Loop</td><td>生产局部证据</td><td>protocol、数据、结果、局部分析</td><td>没有 grounding，变成空泛反思</td></tr>
+      <tr><td>Outer Loop</td><td>生产全局意义</td><td>模式、机制解释、方向决策、findings</td><td>有很多活动，但没有理解</td></tr>
+      <tr><td>Human Loop</td><td>更新价值信号</td><td>反馈、约束、优先级变化</td><td>AI 漂移或优化错误目标</td></tr>
+    </tbody>
+  </table>
+
+  <h2>6. 可复用设计模板</h2>
+  <pre>Long-Running AI Skill Design Contract
+
+1. Human Value Signal
+   - objective:
+   - audience:
+   - success_criteria:
+   - constraints:
+   - risk_boundaries:
+   - feedback_cadence:
+
+2. Artifact Interfaces
+   - state artifact:
+   - log artifact:
+   - findings artifact:
+   - evidence artifact:
+   - human report artifact:
+   - final deliverable artifact:
+
+3. Loop Design
+   - inner loop evidence cadence:
+   - outer loop synthesis trigger:
+   - human governance trigger:
+
+4. Health Checks
+   - artifact health:
+   - value-signal health:
+   - loop health:</pre>
+
+  <h2>7. 健康度诊断</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Artifact Health</h3>
+      <ul>
+        <li>每个 artifact 是否有明确消费者？</li>
+        <li><code>state.yaml</code> 是否足以恢复工作？</li>
+        <li><code>findings.md</code> 是否是综合而不是流水账？</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Value-Signal Health</h3>
+      <ul>
+        <li>目标和受众是否清楚？</li>
+        <li>成功标准是否明确？</li>
+        <li>约束和风险边界是否记录？</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Loop Health</h3>
+      <ul>
+        <li>内循环是否产生证据？</li>
+        <li>外循环是否产生新理解？</li>
+        <li>人类反馈是否改变优先级？</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>8. 当前结论与下一步</h2>
+  <div class="card">
+    <p>目前 H1、H2、H3 已形成连贯框架：artifact 提供状态化界面，价值信号定义人机分工，双循环管理证据与意义的生产节奏。</p>
+    <p><strong>下一步应验证 H4：</strong>进展报告是否是长期 AI 研究代理的主要治理接口。也就是说，<code>to_human/</code> 不只是展示目录，而是人类控制 AI 研究系统的关键界面。</p>
+  </div>
+</main>
+</body>
+</html>

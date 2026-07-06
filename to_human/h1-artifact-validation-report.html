@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>H1 验证报告：状态化 Artifact 是 /autoresearch 的核心交互媒介</title>
+  <style>
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif; line-height: 1.68; color: #172033; background: #f6f7fb; }
+    main { max-width: 1120px; margin: 0 auto; padding: 46px 28px 88px; }
+    .hero { color: white; background: radial-gradient(circle at 20% 0%, #6366f1, #111827 58%); border-radius: 28px; padding: 42px 44px; box-shadow: 0 24px 70px rgba(17,24,39,.22); }
+    .hero h1 { margin: 0 0 14px; font-size: 34px; line-height: 1.18; }
+    .hero p { margin: 0; color: #dbeafe; font-size: 18px; max-width: 880px; }
+    .pill { display: inline-block; margin: 18px 8px 0 0; padding: 6px 12px; border-radius: 999px; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.22); color: white; font-size: 13px; }
+    h2 { margin-top: 38px; color: #111827; font-size: 25px; }
+    h3 { color: #1f2937; margin-bottom: 8px; }
+    .card { background: white; border: 1px solid #e7eaf0; border-radius: 20px; padding: 24px 26px; margin: 18px 0; box-shadow: 0 12px 34px rgba(15,23,42,.06); }
+    .verdict { border-left: 6px solid #16a34a; background: #f0fdf4; }
+    .warning { border-left: 6px solid #f59e0b; background: #fffbeb; }
+    table { width: 100%; border-collapse: collapse; background: white; border-radius: 18px; overflow: hidden; box-shadow: 0 12px 34px rgba(15,23,42,.06); }
+    th, td { border-bottom: 1px solid #e5e7eb; text-align: left; vertical-align: top; padding: 12px 14px; }
+    th { background: #eef2ff; color: #1e1b4b; }
+    code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    pre { background: #0f172a; color: #dbeafe; padding: 20px; border-radius: 16px; overflow-x: auto; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 16px; }
+    .metric { font-size: 34px; font-weight: 800; color: #4f46e5; }
+    .small { color: #64748b; font-size: 14px; }
+    @media (max-width: 820px) { .grid { grid-template-columns: 1fr; } .hero { padding: 30px 24px; } }
+  </style>
+</head>
+<body>
+<main>
+  <section class="hero">
+    <h1>H1 验证报告：状态化 Artifact 是核心交互媒介</h1>
+    <p>本报告进一步验证 H1：/autoresearch 的长期可运行性并不主要来自“更长的对话”，而来自将研究过程拆解成不同消费者可消费的持久化 artifact。</p>
+    <span class="pill">研究阶段：H1 Validation</span>
+    <span class="pill">结论：Supported</span>
+    <span class="pill">日期：2026-07-06</span>
+  </section>
+
+  <h2>1. 验证结论</h2>
+  <div class="card verdict">
+    <h3>H1 得到支持</h3>
+    <p><strong>状态化 artifact 是 /autoresearch 的核心交互媒介。</strong>这些文件和目录不是被动存储，而是面向不同消费者的界面：AI 需要操作状态，人类需要治理报告，复现者需要协议和结果，未来论文写作者需要文献和数据。</p>
+  </div>
+
+  <div class="grid">
+    <div class="card"><div class="metric">9</div><div class="small">识别出的核心 artifact / 目录</div></div>
+    <div class="card"><div class="metric">6</div><div class="small">抽象出的 artifact 层级</div></div>
+    <div class="card"><div class="metric">5</div><div class="small">主要消费者角色：AI、人类、审计者、复现者、论文读者</div></div>
+    <div class="card"><div class="metric">1</div><div class="small">核心设计原则：先定义消费者，再定义 artifact</div></div>
+  </div>
+
+  <h2>2. Artifact 功能映射</h2>
+  <table>
+    <thead>
+      <tr><th>Artifact</th><th>生产者</th><th>主要消费者</th><th>降低的不确定性</th><th>缺失时损失</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><code>research-state.yaml</code></td><td>AI</td><td>AI</td><td>现在在哪里？下一步是什么？</td><td>失去连续性和恢复能力</td></tr>
+      <tr><td><code>research-log.md</code></td><td>AI</td><td>人类审计者 + AI</td><td>为什么做这个决策？</td><td>失去决策溯源和 pivot 解释</td></tr>
+      <tr><td><code>findings.md</code></td><td>AI</td><td>AI + 人类</td><td>目前真正知道什么？</td><td>失去跨实验学习和叙事主线</td></tr>
+      <tr><td><code>literature/</code></td><td>AI</td><td>AI + 论文写作者</td><td>外部已有知识是什么？</td><td>失去文献 grounding 和引用依据</td></tr>
+      <tr><td><code>experiments/</code></td><td>AI</td><td>AI + 复现者</td><td>测试了什么？结果是什么？</td><td>失去实验纪律和复现能力</td></tr>
+      <tr><td><code>src/</code></td><td>AI</td><td>AI 执行者</td><td>哪些代码应该复用？</td><td>重复实现、维护性下降</td></tr>
+      <tr><td><code>data/</code></td><td>AI</td><td>分析者 + 论文写作者</td><td>哪些测量支撑结论？</td><td>无法重新分析、绘图和验证</td></tr>
+      <tr><td><code>to_human/</code></td><td>AI</td><td>人类</td><td>人类应该知道什么并如何判断？</td><td>失去治理界面和方向校准</td></tr>
+      <tr><td><code>paper/</code></td><td>AI + 人类</td><td>传播/发表受众</td><td>最终贡献是什么？</td><td>研究难以被封装和传播</td></tr>
+    </tbody>
+  </table>
+
+  <h2>3. 关键机制：Artifact 是消费者界面</h2>
+  <div class="card">
+    <p>H1 的进一步验证将“文件”重新解释为“消费者界面”。每个 artifact 的存在不是因为项目目录需要整齐，而是因为某类消费者需要在未来某个时刻读取某种压缩级别的信息，并据此采取行动。</p>
+    <pre>Artifact 设计问题：
+1. 谁会消费它？
+2. 消费者需要原始数据、操作状态、综合认知，还是展示叙事？
+3. 它支持什么决策或下一步行动？
+4. 如果没有它，研究系统会失去什么能力？</pre>
+  </div>
+
+  <h2>4. Artifact 层级栈</h2>
+  <pre>Raw evidence layer
+  data/, logs, result files
+
+Protocol and reproducibility layer
+  experiments/*/protocol.md, analysis.md
+
+Operational state layer
+  research-state.yaml
+
+Cognitive synthesis layer
+  findings.md
+
+Governance and communication layer
+  to_human/*.html or *.pdf
+
+Final contribution layer
+  paper/</pre>
+
+  <h2>5. 为什么不能只靠聊天记录？</h2>
+  <div class="card warning">
+    <p>纯聊天记录不适合作为长期研究的主要载体，因为它同时存在五个问题：</p>
+    <ul>
+      <li><strong>线性：</strong>状态、证据、结论、报告混在一条时间线上。</li>
+      <li><strong>依赖上下文窗口：</strong>长程信息会压缩、丢失或难以恢复。</li>
+      <li><strong>消费者未分化：</strong>AI 的操作状态和人类的阅读报告混在一起。</li>
+      <li><strong>审计性弱：</strong>协议、结果和 pivot 不容易作为独立对象检查。</li>
+      <li><strong>恢复困难：</strong>未来循环需要简洁状态，而不是完整对话。</li>
+    </ul>
+  </div>
+
+  <h2>6. 可复用设计原则</h2>
+  <div class="card">
+    <h3>原则：长期 AI 技能的每个持久化 artifact 都应声明消费者和决策功能。</h3>
+    <pre>Artifact: &lt;名称&gt;
+Producer: &lt;谁创建/更新&gt;
+Consumer: &lt;谁读取&gt;
+Compression level: &lt;raw / operational / synthesized / presentation&gt;
+Decision enabled: &lt;它支持什么行动&gt;
+Failure if missing: &lt;没有它会坏掉什么&gt;</pre>
+    <p>这意味着 artifact 设计本质上是交互设计，而不仅是文件组织。</p>
+  </div>
+
+  <h2>7. 下一步</h2>
+  <div class="card">
+    <p>建议继续验证 H2：人机协作是否可以稳定解释为“不对称生产者/消费者交换”。下一轮可以把该模型与三种替代模型比较：</p>
+    <ol>
+      <li>命令执行模型：人逐步下命令，AI 被动执行。</li>
+      <li>委托模型：人给目标，AI 交付结果，但中间缺少治理 artifact。</li>
+      <li>审批流模型：AI 每一步都请求确认，安全但低效。</li>
+    </ol>
+  </div>
+</main>
+</body>
+</html>

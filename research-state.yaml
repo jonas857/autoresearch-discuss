@@ -1,0 +1,58 @@
+research_question: "How does the /autoresearch skill mediate human-AI interaction through producer-consumer roles, stateful artifacts, and dual-loop research orchestration?"
+project_title: "First-principles analysis of /autoresearch human-AI interaction mechanisms"
+created: "2026-07-06"
+last_updated: "2026-07-06"
+stage: "framework_synthesis"
+status: "active"
+
+objective: >
+  Develop a rigorous conceptual and operational model of how humans and AI should interact when using the /autoresearch skill, especially through first-principles analysis and producer-consumer role decomposition.
+
+value_function:
+  primary_audience: "AI skill designers, AI product builders, research managers, and advanced Claude Code users"
+  desired_outputs:
+    - "Reusable framework for designing long-running AI research skills"
+    - "Clear human-AI role allocation model"
+    - "Producer-consumer artifact map"
+    - "Progress report suitable for human review"
+  success_criteria:
+    - "Explains why /autoresearch is not a normal question-answering workflow"
+    - "Separates human value-setting from AI execution and synthesis"
+    - "Identifies artifact layers and their consumers"
+    - "Produces actionable guidance for using or designing similar skills"
+
+current_understanding_summary: >
+  The /autoresearch skill transforms a vague or open-ended research intention into a stateful autonomous research system. The human primarily produces goals, value functions, constraints, and feedback, while consuming compressed insight and decision options. The AI consumes human intent and produces structured research artifacts, experiments, syntheses, reports, and eventually papers.
+
+hypotheses:
+  - id: H1
+    title: "Stateful artifacts are the core interaction medium"
+    status: "supported_by_artifact_mapping"
+    prediction: "research-state.yaml, findings.md, research-log.md, experiments/, and to_human/ divide consumers by information need and make long-horizon AI work governable."
+  - id: H2
+    title: "Human-AI collaboration is asymmetric producer-consumer exchange"
+    status: "supported_with_refinement"
+    prediction: "Humans produce value functions and constraints; AI produces research labor and cognitive compression; progress reports close the loop."
+  - id: H3
+    title: "Dual-loop architecture separates production of evidence from production of meaning"
+    status: "supported_by_loop_mapping"
+    prediction: "The inner loop optimizes evidence generation, while the outer loop performs interpretation, pivoting, and narrative formation."
+  - id: H4
+    title: "Progress reports are the primary governance interface"
+    status: "supported_by_governance_mapping"
+    prediction: "Human control is most effective when exercised through low-frequency, high-level review of synthesized reports rather than step-by-step command."
+
+current_focus: "Draft article-style synthesis from final H1-H4 Stateful Value-Signal Research Loop framework."
+next_actions:
+  - "Draft a concise article-style synthesis explaining the complete model."
+  - "Optionally generate a shorter executive summary for skill designers."
+  - "Decide whether to conclude as methodology article or continue with external literature validation."
+  - "If concluding, mark research complete and prepare final deliverables index."
+
+experiment_trajectory: []
+
+open_questions:
+  - "What artifact taxonomy best explains /autoresearch interaction?"
+  - "How much autonomy should AI have before human review is required?"
+  - "Can the producer-consumer model be formalized into a reusable skill design template?"
+  - "What failure modes arise when humans over-control or under-specify the workflow?"
