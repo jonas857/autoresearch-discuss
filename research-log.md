@@ -326,6 +326,28 @@ The plan defines:
 
 The project is complete as a GitHub methodology package. Academic submission would require a target venue, quote-level citation verification, formal figures, and venue-template conversion.
 
+## 2026-07-07 — Project concluded as methodology package
+
+Created `PROJECT_CONCLUSION.md` and marked `research-state.yaml` as concluded.
+
+### Final conclusion
+
+The project has completed the full autoresearch cycle for its intended practical methodology goal. It produced:
+
+- validated H1-H4 analyses;
+- final framework reports;
+- Chinese methodology article;
+- citation-aware whitepaper;
+- English and Chinese formal paper drafts;
+- citation verification package;
+- visual methodology page;
+- final paper package plan;
+- GitHub repository publication.
+
+### Remaining work
+
+Remaining tasks are optional and depend on a new goal: GitHub Pages publication, academic venue submission, quote-level citation verification, LaTeX conversion, or validation against additional AI skills.
+
 ### Limitation
 
 Entries are candidate references, not final citation-ready references. They require metadata and content verification before formal academic submission.

@@ -53,6 +53,10 @@ Local workspace: `D:/AI/skill拆解`
    - `research-state.yaml`
    - `research-log.md`
 
+12. **Project conclusion**
+   - `PROJECT_CONCLUSION.md`
+   - Final conclusion note and optional future-work list.
+
 ## Hypothesis analyses
 
 - H1: `experiments/h1-stateful-artifacts-analysis.md`
@@ -75,4 +79,4 @@ Human Value Signal
 
 ## Status
 
-The conceptual research phase has been converted into a practical methodology package. The main dissemination artifacts are the Chinese methodology article and the visual HTML methodology page. Further work should focus on examples from other long-running AI skills, formal paper formatting, or publishing the methodology page as a project landing page.
+The autoresearch cycle is concluded as a practical methodology package. Further work is optional and should focus on GitHub Pages publication, LaTeX conversion for a selected academic venue, quote-level citation verification, or validation against additional long-running AI skills.
