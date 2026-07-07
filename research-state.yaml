@@ -42,11 +42,11 @@ hypotheses:
     status: "supported_by_governance_mapping"
     prediction: "Human control is most effective when exercised through low-frequency, high-level review of synthesized reports rather than step-by-step command."
 
-current_focus: "Preliminary external literature validation added; next step is citation-verified paper strengthening or project conclusion."
+current_focus: "Citation-aware whitepaper drafted; next step is push updates and optionally perform full citation verification or conclude."
 next_actions:
-  - "Commit and push external validation notes."
-  - "Optionally perform deeper citation verification with accessible sources."
-  - "Optionally update article draft with literature grounding section."
+  - "Commit and push whitepaper draft."
+  - "Optionally perform full citation verification with BibTeX extraction."
+  - "Optionally convert whitepaper into formal paper format."
   - "If no further validation is needed, mark project concluded."
 
 experiment_trajectory: []

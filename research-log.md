@@ -217,3 +217,24 @@ Direct WebFetch failed due to network/domain verification restrictions, so the n
 ### Result
 
 The external context broadly supports the framework: mixed-initiative interaction supports value-signal exchange; provenance supports artifact interfaces; AI governance supports report-based oversight; distributed cognition supports artifact-mediated research memory.
+
+## 2026-07-06 — Citation-aware whitepaper draft
+
+Created `paper/stateful-value-signal-research-loop-whitepaper.md`.
+
+### Result
+
+The whitepaper upgrades the article into a citation-aware methodology draft. It adds a related-theory positioning section connecting the framework to:
+
+- mixed-initiative interaction;
+- provenance and traceability;
+- AI risk management and human oversight;
+- distributed cognition and artifact-mediated work.
+
+### Limitation
+
+The whitepaper explicitly marks these as candidate sources requiring full citation verification before academic submission.
+
+### Next direction
+
+Commit and push the whitepaper, then decide whether to conclude the project or perform full citation verification and formal paper conversion.

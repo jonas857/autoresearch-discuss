@@ -16,7 +16,11 @@ Local workspace: `D:/AI/skill拆解`
    - `paper/stateful-value-signal-research-loop-article.md`
    - Chinese methodology article: “从 `/autoresearch` 看长期 AI 技能设计：状态化价值信号研究循环”.
 
-3. **Reusable framework template**
+3. **Citation-aware whitepaper draft**
+   - `paper/stateful-value-signal-research-loop-whitepaper.md`
+   - Whitepaper-style version with related-theory positioning and citation verification status.
+
+4. **Reusable framework template**
    - `src/long_running_ai_skill_framework.md`
    - Generalized design pattern for long-running AI skills.
 
