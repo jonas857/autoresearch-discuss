@@ -198,3 +198,22 @@ Created `FINAL_DELIVERABLES.md` as an index of the main outputs.
 ### Current conclusion
 
 The project has completed a coherent conceptual research cycle and produced a practical methodology output. Further work should either add external literature validation or convert the article into a more formal paper.
+
+## 2026-07-06 — Preliminary external validation
+
+Added preliminary literature grounding in `literature/external-validation-notes.md`.
+
+### Sources targeted
+
+- Horvitz, “Principles of Mixed-Initiative User Interfaces” — relevant to initiative sharing and H2.
+- W3C PROV Overview — relevant to provenance, artifact traceability, and H1.
+- NIST AI Risk Management Framework — relevant to human oversight, governance reports, and H4.
+- Distributed cognition / artifact-mediated collaboration — relevant to workspace-as-cognitive-system framing.
+
+### Limitation
+
+Direct WebFetch failed due to network/domain verification restrictions, so the notes are preliminary and should be citation-verified before formal academic publication.
+
+### Result
+
+The external context broadly supports the framework: mixed-initiative interaction supports value-signal exchange; provenance supports artifact interfaces; AI governance supports report-based oversight; distributed cognition supports artifact-mediated research memory.

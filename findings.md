@@ -228,6 +228,17 @@ The deeper pattern is **control without micromanagement**. Humans retain control
 - Progress reports should be generated when they can change governance, not merely when activity occurred: after synthesis, surprise, pivot candidates, stagnation, or before expensive/irreversible actions.
 - Good reports must include claims, evidence, uncertainty, direction recommendation, and human feedback surface; otherwise they become activity dumps or over-compressed assertions.
 
+## External Validation Notes
+
+Preliminary external grounding strengthens the framework:
+
+- Mixed-initiative interaction supports H2: initiative should shift by layer rather than by every micro-action.
+- Provenance and traceability concepts support H1: artifacts encode who/what produced claims and how downstream conclusions depend on them.
+- AI risk management and human oversight concepts support H4: reports should expose objective, evidence, uncertainty, risk, and next actions.
+- Distributed cognition/artifact-mediated work supports the broader claim that the workspace itself is part of the research cognition system.
+
+Direct page fetching was blocked by network/domain verification policy, so these notes remain preliminary and should be fully citation-verified before formal academic paper submission.
+
 ## Open Questions
 
 1. Can the producer-consumer model become a general design pattern for long-running AI skills?
