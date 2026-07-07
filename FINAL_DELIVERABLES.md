@@ -11,8 +11,8 @@ Local workspace: `D:/AI/skill拆解`
 ## Core outputs
 
 1. **Methodology HTML page**
-   - `to_human/stateful-value-signal-methodology.html`
-   - Human-facing visual introduction to the Stateful Value-Signal Research Loop methodology, including layers, templates, diagnostics, and theoretical grounding.
+   - `index.html`
+   - GitHub Pages landing page with a polished Chinese explanation of the Stateful Value-Signal Research Loop methodology, including layers, templates, diagnostics, theory grounding, and links to key deliverables.
 
 2. **Final framework report**
    - `to_human/h1-h4-final-framework-report.html`

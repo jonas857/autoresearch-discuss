@@ -369,24 +369,28 @@ Created generic LaTeX paper package:
 
 This is a generic article-style LaTeX version suitable for later conversion to a specific target venue template.
 
-## 2026-07-07 — Publication artifacts verified
+## 2026-07-07 — GitHub Pages landing page beautified
 
-Verified optional publication artifacts.
+Improved the GitHub Pages landing page with a polished Chinese explanation of the Stateful Value-Signal Research Loop.
 
-### GitHub Pages
+### Result
 
-GitHub Pages API reports the site as built:
+Updated root `index.html` into a full Chinese landing page with:
 
-- <https://jonas857.github.io/autoresearch-discuss/>
-- Source: `master` branch root `/`
+- sticky navigation;
+- hero section;
+- explanation of why ordinary AI chat is insufficient for long-running tasks;
+- core loop visualization;
+- five-layer methodology structure;
+- H1-H4 summary;
+- reusable design templates;
+- producer-consumer human-AI role table;
+- governance report checklist;
+- diagnostic matrix;
+- external theory grounding;
+- links to Chinese article, Chinese formal paper draft, final deliverables, LaTeX package, citation checklist, and GitHub repository.
 
-Direct WebFetch of the Pages URL was blocked by environment domain verification, but GitHub's API status is `built`.
-
-### LaTeX
-
-No local TeX compiler is installed (`latexmk` and `pdflatex` unavailable), so a PDF build could not be performed. A source sanity check passed and Pandoc successfully generated `paper/latex/main-preview.html` from `paper/latex/main.tex`.
-
-Created `PUBLICATION_VERIFICATION.md` to record these results.
+The previous `to_human/stateful-value-signal-methodology.html` now redirects to the root landing page to avoid duplicated versions.
 
 ### Limitation
 

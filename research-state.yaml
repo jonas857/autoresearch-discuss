@@ -42,9 +42,9 @@ hypotheses:
     status: "supported_by_governance_mapping"
     prediction: "Human control is most effective when exercised through low-frequency, high-level review of synthesized reports rather than step-by-step command."
 
-current_focus: "Project concluded; GitHub Pages enabled and generic LaTeX paper package created. Optional remaining work is venue-specific formatting or quote-level citation verification."
+current_focus: "Project concluded; GitHub Pages landing page beautified with Chinese explanation and generic LaTeX paper package created. Optional remaining work is venue-specific formatting or quote-level citation verification."
 next_actions:
-  - "Wait for GitHub Pages build to finish, then review https://jonas857.github.io/autoresearch-discuss/."
+  - "Review https://jonas857.github.io/autoresearch-discuss/ after Pages rebuild completes."
   - "Optionally convert paper/latex/main.tex into a specific venue template."
   - "Optionally perform quote-level citation verification for academic submission."
   - "No further autonomous research required for methodology-package completion."
