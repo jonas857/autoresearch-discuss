@@ -230,14 +230,15 @@ The deeper pattern is **control without micromanagement**. Humans retain control
 
 ## External Validation Notes
 
-Preliminary external grounding strengthens the framework:
+Citation verification strengthens the framework with five external grounding families:
 
-- Mixed-initiative interaction supports H2: initiative should shift by layer rather than by every micro-action.
-- Provenance and traceability concepts support H1: artifacts encode who/what produced claims and how downstream conclusions depend on them.
-- AI risk management and human oversight concepts support H4: reports should expose objective, evidence, uncertainty, risk, and next actions.
-- Distributed cognition/artifact-mediated work supports the broader claim that the workspace itself is part of the research cognition system.
+- **Mixed-initiative interaction** (Horvitz, CHI 1999) supports H2: initiative should shift by epistemic layer rather than by every micro-action. Humans set values, constraints, and governance; AI takes initiative in evidence production and synthesis.
+- **W3C PROV** supports H1: artifacts can be treated as provenance-bearing entities connected to activities, agents, generation, use, derivation, attribution, and responsibility.
+- **NIST AI RMF 1.0** strongly supports H4: progress reports can be framed as governance, monitoring, risk-communication, and human-oversight interfaces for socio-technical AI systems. This was the strongest adversarially verified citation cluster.
+- **Distributed cognition and cognitive artifacts** (Hutchins; Norman) support the broader claim that durable workspace artifacts participate in the research cognition system rather than merely storing outputs.
+- **Scientific workflow provenance and experiment tracking** support H3: evidence loops need durable execution context, data dependencies, parameters, outputs, and interpretive metadata so results can be compared, audited, and reused.
 
-Direct page fetching was blocked by network/domain verification policy, so these notes remain preliminary and should be fully citation-verified before formal academic paper submission.
+Important caution: external sources support the framework's design requirements; they do not endorse or prove the Stateful Value-Signal Research Loop itself. Avoid overclaiming that NIST AI RMF is a lifecycle loop identical to this framework; the safer claim is that it provides cross-cutting governance and risk-management concepts that validate the need for reports, traceability, measurement, and oversight.
 
 ## Open Questions
 

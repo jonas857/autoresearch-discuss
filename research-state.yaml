@@ -42,12 +42,12 @@ hypotheses:
     status: "supported_by_governance_mapping"
     prediction: "Human control is most effective when exercised through low-frequency, high-level review of synthesized reports rather than step-by-step command."
 
-current_focus: "Citation verification package prepared; next step is full source verification or project conclusion."
+current_focus: "Citation metadata strengthened; next step is commit/push and optionally perform quote-level verification or formal paper formatting."
 next_actions:
-  - "Optionally verify candidate references and replace notes with citation-ready BibTeX."
+  - "Commit and push strengthened references and checklist."
+  - "Optionally perform quote-level verification and add page/section references."
   - "Optionally convert whitepaper into formal paper format."
   - "If no further validation is needed, mark project concluded."
-  - "Keep GitHub repository updated with any final changes."
 
 experiment_trajectory: []
 

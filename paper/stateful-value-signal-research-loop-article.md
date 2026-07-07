@@ -303,7 +303,25 @@ governance_report_health:
 
 ---
 
-## 11. 结论
+## 11. 外部理论依据：为什么这个框架不是孤立发明
+
+为了避免把 **Stateful Value-Signal Research Loop** 仅仅理解为一个经验性工作流，可以把它放进五组已有研究与标准传统中。
+
+第一，Eric Horvitz 在 CHI 1999 的 mixed-initiative user interfaces 研究说明，人机系统不必在“人类全程指挥”和“机器完全自主”之间二选一。更好的结构是根据任务、风险和不确定性分配 initiative。对应到本文框架，initiative 不是按每个微动作切分，而是按认识论层级切分：人类控制价值、约束和治理，AI 控制常规证据生产与综合，报告则在关键节点把 initiative 交还给人类。
+
+第二，W3C PROV 系列标准为 artifact-as-interface 提供了形式化语言。PROV 把 provenance 建模为 entity、activity、agent 以及 generation、use、derivation、attribution 等关系。对应到 `/autoresearch`，protocol、result、analysis、findings、report 都可以被视为 provenance-bearing entities；实验、搜索、综合是 activities；AI、人类和领域 skill 是 agents。这样看，文件系统不是 housekeeping，而是可追溯的研究状态结构。
+
+第三，NIST AI Risk Management Framework 1.0 为 progress report-as-governance-interface 提供了权威外部支撑。NIST AI RMF 强调 AI 风险是 socio-technical 的，并把 governance、measurement、management、trust calibration、accountability、transparency 等作为风险管理核心。对应到本文框架，进展报告不是“总结做了什么”，而是让人类理解目标、证据、不确定性、风险和下一步行动的治理界面。
+
+第四，distributed cognition 与 cognitive artifacts 理论解释了为什么长期研究不能只依赖对话上下文。Hutchins 的 distributed cognition 视角和 Norman 的 cognitive artifacts 概念都表明，复杂认知任务分布在人员、工具、表示和环境中。对应到 `/autoresearch`，workspace 本身就是认知系统的一部分：状态文件、日志、发现文档和报告共同承担记忆、比较、压缩和方向校准功能。
+
+第五，scientific workflow provenance 和 experiment tracking 文献说明，可复现研究系统必须保存执行上下文、依赖关系、参数、版本、输出和解释性元数据。Davidson 与 Freire 关于 scientific workflow provenance 的讨论、Open Provenance Model，以及 MLflow 等实验追踪系统都支持本文的 H3：内循环证据生产和外循环意义生产需要由稳定 artifact 连接，否则研究就无法比较、审计、复用和治理。
+
+因此，本文框架的贡献不是声称这些外部文献已经提出了同一个模型，而是把它们的共同要求综合到长期 AI skill 设计中：mixed initiative 解释人机分工，provenance 解释 artifact 结构，risk management 解释治理报告，distributed cognition 解释 workspace 的认知作用，scientific workflow provenance 解释证据循环的可审计性。
+
+---
+
+## 12. 结论
 
 `/autoresearch` 的本质不是一个命令，而是一种长期人机协作协议。
 

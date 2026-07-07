@@ -250,6 +250,25 @@ Created preliminary citation package:
 
 The package records candidate references for mixed-initiative interaction, provenance, AI governance, distributed cognition, and cognitive artifacts. It also maps framework claims to candidate sources and defines verification statuses.
 
+## 2026-07-07 — Citation metadata strengthened
+
+Strengthened the citation package with more complete metadata in `paper/references.bib` and updated `paper/citation-verification-checklist.md`.
+
+### Result
+
+Added or strengthened metadata for:
+
+- Horvitz 1999 mixed-initiative user interfaces, including DOI and CHI pages.
+- W3C PROV-Overview, PROV-DM, and PROV-O standards references.
+- NIST AI RMF 1.0, including NIST AI 100-1 and DOI.
+- Hutchins 1995 distributed cognition reference.
+- Norman 1991 cognitive artifacts reference.
+- Davidson and Freire 2008 scientific workflow provenance reference.
+
+### Limitation
+
+Most entries are now metadata-verified enough for whitepaper use, but quote-level content verification and page-specific claims remain needed before formal academic submission.
+
 ### Limitation
 
 Entries are candidate references, not final citation-ready references. They require metadata and content verification before formal academic submission.
