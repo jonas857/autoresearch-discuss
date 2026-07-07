@@ -8,32 +8,40 @@ Local workspace: `D:/AI/skill拆解`
 
 ## Core outputs
 
-1. **Final framework report**
+1. **Methodology HTML page**
+   - `to_human/stateful-value-signal-methodology.html`
+   - Human-facing visual introduction to the Stateful Value-Signal Research Loop methodology, including layers, templates, diagnostics, and theoretical grounding.
+
+2. **Final framework report**
    - `to_human/h1-h4-final-framework-report.html`
    - Human-facing final synthesis of H1-H4.
 
-2. **Article draft**
+3. **Article draft**
    - `paper/stateful-value-signal-research-loop-article.md`
-   - Chinese methodology article: “从 `/autoresearch` 看长期 AI 技能设计：状态化价值信号研究循环”.
+   - Chinese methodology article focused on the reusable **Stateful Value-Signal Research Loop** method for designing long-running AI skills.
 
-3. **Citation-aware whitepaper draft**
+4. **Citation-aware whitepaper draft**
    - `paper/stateful-value-signal-research-loop-whitepaper.md`
    - Whitepaper-style version with related-theory positioning and citation verification status.
 
-4. **Reusable framework template**
+5. **Formal paper draft**
+   - `paper/formal-paper-draft.md`
+   - Paper-style version with abstract, related work, framework, design implications, limitations, and references pointer.
+
+6. **Reusable framework template**
    - `src/long_running_ai_skill_framework.md`
    - Generalized design pattern for long-running AI skills.
 
-5. **Citation package**
+7. **Citation package**
    - `paper/references.bib`
    - `paper/citation-verification-checklist.md`
    - Candidate references and verification workflow for formal paper development.
 
-6. **Findings synthesis**
+8. **Findings synthesis**
    - `findings.md`
    - Living research understanding and lessons.
 
-7. **Research state and log**
+9. **Research state and log**
    - `research-state.yaml`
    - `research-log.md`
 
@@ -59,4 +67,4 @@ Human Value Signal
 
 ## Status
 
-The conceptual research phase is complete enough for a practical methodology output. Further work should focus on external literature validation, examples from other long-running AI skills, or conversion into a formal paper if academic rigor is required.
+The conceptual research phase has been converted into a practical methodology package. The main dissemination artifacts are the Chinese methodology article and the visual HTML methodology page. Further work should focus on examples from other long-running AI skills, formal paper formatting, or publishing the methodology page as a project landing page.

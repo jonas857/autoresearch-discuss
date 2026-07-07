@@ -2,7 +2,7 @@ research_question: "How does the /autoresearch skill mediate human-AI interactio
 project_title: "First-principles analysis of /autoresearch human-AI interaction mechanisms"
 created: "2026-07-06"
 last_updated: "2026-07-06"
-stage: "external_validation"
+stage: "methodology_package"
 status: "active"
 
 objective: >
@@ -42,11 +42,11 @@ hypotheses:
     status: "supported_by_governance_mapping"
     prediction: "Human control is most effective when exercised through low-frequency, high-level review of synthesized reports rather than step-by-step command."
 
-current_focus: "Citation metadata strengthened; next step is commit/push and optionally perform quote-level verification or formal paper formatting."
+current_focus: "Formal paper draft created; next step is review, optional LaTeX conversion, or project conclusion."
 next_actions:
-  - "Commit and push strengthened references and checklist."
-  - "Optionally perform quote-level verification and add page/section references."
-  - "Optionally convert whitepaper into formal paper format."
+  - "Review paper/formal-paper-draft.md for structure and argument quality."
+  - "Optionally convert formal draft into LaTeX with a target venue style."
+  - "Optionally perform quote-level citation verification and add in-text page references."
   - "If no further validation is needed, mark project concluded."
 
 experiment_trajectory: []

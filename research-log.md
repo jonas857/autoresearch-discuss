@@ -269,6 +269,29 @@ Added or strengthened metadata for:
 
 Most entries are now metadata-verified enough for whitepaper use, but quote-level content verification and page-specific claims remain needed before formal academic submission.
 
+## 2026-07-07 — Formal paper draft created
+
+Created `paper/formal-paper-draft.md`.
+
+### Result
+
+The draft converts the whitepaper into a formal paper-style structure:
+
+1. Abstract.
+2. Introduction.
+3. Related Work and Theoretical Grounding.
+4. Method.
+5. Framework.
+6. Stateful Value-Signal Research Loop.
+7. Design Implications.
+8. Failure Modes.
+9. Limitations.
+10. Conclusion.
+
+### Next direction
+
+The project is now ready for review as a paper-style draft. Further work should focus on quote-level citation verification, LaTeX conversion, or final project conclusion.
+
 ### Limitation
 
 Entries are candidate references, not final citation-ready references. They require metadata and content verification before formal academic submission.
