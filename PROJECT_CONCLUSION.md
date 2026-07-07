@@ -4,6 +4,8 @@ Project: **autoresearch-discuss**
 
 GitHub: <https://github.com/jonas857/autoresearch-discuss>
 
+GitHub Pages: <https://jonas857.github.io/autoresearch-discuss/>
+
 Local workspace: `D:/AI/skill拆解`
 
 ## Conclusion status

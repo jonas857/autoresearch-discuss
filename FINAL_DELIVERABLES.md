@@ -4,6 +4,8 @@ Project: **autoresearch-discuss**
 
 GitHub: <https://github.com/jonas857/autoresearch-discuss>
 
+GitHub Pages: <https://jonas857.github.io/autoresearch-discuss/>
+
 Local workspace: `D:/AI/skill拆解`
 
 ## Core outputs
@@ -56,6 +58,11 @@ Local workspace: `D:/AI/skill拆解`
 12. **Project conclusion**
    - `PROJECT_CONCLUSION.md`
    - Final conclusion note and optional future-work list.
+
+13. **LaTeX paper package**
+   - `paper/latex/main.tex`
+   - `paper/latex/references.bib`
+   - Generic article LaTeX version for later venue-specific conversion.
 
 ## Hypothesis analyses
 

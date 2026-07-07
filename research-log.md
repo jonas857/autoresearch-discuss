@@ -348,6 +348,27 @@ The project has completed the full autoresearch cycle for its intended practical
 
 Remaining tasks are optional and depend on a new goal: GitHub Pages publication, academic venue submission, quote-level citation verification, LaTeX conversion, or validation against additional AI skills.
 
+## 2026-07-07 — GitHub Pages and LaTeX package
+
+Completed optional follow-up tasks 1 and 2 requested by the user.
+
+### GitHub Pages
+
+Added root `index.html` redirecting to `to_human/stateful-value-signal-methodology.html` and enabled GitHub Pages from the `master` branch root.
+
+Pages URL: <https://jonas857.github.io/autoresearch-discuss/>
+
+Initial Pages status returned `building`; review after GitHub finishes deployment.
+
+### LaTeX package
+
+Created generic LaTeX paper package:
+
+- `paper/latex/main.tex`
+- `paper/latex/references.bib`
+
+This is a generic article-style LaTeX version suitable for later conversion to a specific target venue template.
+
 ### Limitation
 
 Entries are candidate references, not final citation-ready references. They require metadata and content verification before formal academic submission.
