@@ -36,7 +36,11 @@ Local workspace: `D:/AI/skill拆解`
    - `src/long_running_ai_skill_framework.md`
    - Generalized design pattern for long-running AI skills.
 
-7. **Citation package**
+8. **Final paper package plan**
+   - `paper/final-paper-package-plan.md`
+   - Submission-readiness review, narrative framing, figure recommendation, and next-step checklist.
+
+9. **Citation package**
    - `paper/references.bib`
    - `paper/citation-verification-checklist.md`
    - Candidate references and verification workflow for formal paper development.

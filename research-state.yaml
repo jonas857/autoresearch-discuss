@@ -42,11 +42,11 @@ hypotheses:
     status: "supported_by_governance_mapping"
     prediction: "Human control is most effective when exercised through low-frequency, high-level review of synthesized reports rather than step-by-step command."
 
-current_focus: "Chinese formal paper draft created; next step is review, optional LaTeX conversion, or project conclusion."
+current_focus: "Final paper package plan created; project is ready as a methodology package, with academic submission requiring venue choice, figures, and quote-level citation verification."
 next_actions:
-  - "Review paper/formal-paper-draft-zh.md for Chinese formal-paper quality."
-  - "Optionally convert formal drafts into LaTeX with a target venue style."
-  - "Optionally perform quote-level citation verification and add in-text page references."
+  - "Review paper/final-paper-package-plan.md."
+  - "Optionally publish the visual methodology HTML page as a GitHub Pages landing page."
+  - "For academic submission, choose target venue and convert formal draft into venue template."
   - "If no further validation is needed, mark project concluded."
 
 experiment_trajectory: []
