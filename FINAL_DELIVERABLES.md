@@ -24,11 +24,16 @@ Local workspace: `D:/AI/skill拆解`
    - `src/long_running_ai_skill_framework.md`
    - Generalized design pattern for long-running AI skills.
 
-4. **Findings synthesis**
+5. **Citation package**
+   - `paper/references.bib`
+   - `paper/citation-verification-checklist.md`
+   - Candidate references and verification workflow for formal paper development.
+
+6. **Findings synthesis**
    - `findings.md`
    - Living research understanding and lessons.
 
-5. **Research state and log**
+7. **Research state and log**
    - `research-state.yaml`
    - `research-log.md`
 

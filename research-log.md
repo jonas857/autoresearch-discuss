@@ -238,3 +238,18 @@ The whitepaper explicitly marks these as candidate sources requiring full citati
 ### Next direction
 
 Commit and push the whitepaper, then decide whether to conclude the project or perform full citation verification and formal paper conversion.
+
+## 2026-07-06 — Citation verification package prepared
+
+Created preliminary citation package:
+
+- `paper/references.bib`
+- `paper/citation-verification-checklist.md`
+
+### Result
+
+The package records candidate references for mixed-initiative interaction, provenance, AI governance, distributed cognition, and cognitive artifacts. It also maps framework claims to candidate sources and defines verification statuses.
+
+### Limitation
+
+Entries are candidate references, not final citation-ready references. They require metadata and content verification before formal academic submission.

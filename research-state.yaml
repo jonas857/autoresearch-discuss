@@ -42,12 +42,12 @@ hypotheses:
     status: "supported_by_governance_mapping"
     prediction: "Human control is most effective when exercised through low-frequency, high-level review of synthesized reports rather than step-by-step command."
 
-current_focus: "Citation-aware whitepaper drafted; next step is push updates and optionally perform full citation verification or conclude."
+current_focus: "Citation verification package prepared; next step is full source verification or project conclusion."
 next_actions:
-  - "Commit and push whitepaper draft."
-  - "Optionally perform full citation verification with BibTeX extraction."
+  - "Optionally verify candidate references and replace notes with citation-ready BibTeX."
   - "Optionally convert whitepaper into formal paper format."
   - "If no further validation is needed, mark project concluded."
+  - "Keep GitHub repository updated with any final changes."
 
 experiment_trajectory: []
 
