@@ -64,6 +64,10 @@ Local workspace: `D:/AI/skill拆解`
    - `paper/latex/references.bib`
    - Generic article LaTeX version for later venue-specific conversion.
 
+14. **Publication verification report**
+   - `PUBLICATION_VERIFICATION.md`
+   - GitHub Pages status and LaTeX sanity-check results.
+
 ## Hypothesis analyses
 
 - H1: `experiments/h1-stateful-artifacts-analysis.md`

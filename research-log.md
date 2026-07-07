@@ -369,6 +369,25 @@ Created generic LaTeX paper package:
 
 This is a generic article-style LaTeX version suitable for later conversion to a specific target venue template.
 
+## 2026-07-07 — Publication artifacts verified
+
+Verified optional publication artifacts.
+
+### GitHub Pages
+
+GitHub Pages API reports the site as built:
+
+- <https://jonas857.github.io/autoresearch-discuss/>
+- Source: `master` branch root `/`
+
+Direct WebFetch of the Pages URL was blocked by environment domain verification, but GitHub's API status is `built`.
+
+### LaTeX
+
+No local TeX compiler is installed (`latexmk` and `pdflatex` unavailable), so a PDF build could not be performed. A source sanity check passed and Pandoc successfully generated `paper/latex/main-preview.html` from `paper/latex/main.tex`.
+
+Created `PUBLICATION_VERIFICATION.md` to record these results.
+
 ### Limitation
 
 Entries are candidate references, not final citation-ready references. They require metadata and content verification before formal academic submission.

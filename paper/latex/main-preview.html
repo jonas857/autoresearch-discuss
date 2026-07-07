@@ -1,0 +1,266 @@
+<h1 id="introduction">Introduction</h1>
+<p>Most interactive AI systems are still used through a question-answer
+pattern:</p>
+<div class="center">
+<p><code>Human asks </code><span
+class="math inline">→</span><code> AI answers</code></p>
+</div>
+<p>This pattern is effective for bounded tasks such as summarization,
+code generation, explanation, and short analyses. It is insufficient for
+long-running research-like work. Research tasks are open-ended: the
+initial problem may be underspecified, the path is not known in advance,
+evidence can be noisy, and the value of intermediate results depends on
+later synthesis. A useful long-running AI skill therefore cannot merely
+answer a prompt. It must maintain state, accumulate evidence, revise
+understanding, expose uncertainty, and periodically return
+control-relevant information to a human reviewer.</p>
+<p>The <code>/autoresearch</code> skill provides a concrete case of such
+a system. It initializes a research workspace, maintains
+<code>research-state.yaml</code>, <code>research-log.md</code>,
+<code>findings.md</code>, <code>literature/</code>,
+<code>experiments/</code>, <code>to_human/</code>, and
+<code>paper/</code>, and operates through a two-loop architecture: fast
+inner loops for evidence generation and slower outer loops for synthesis
+and direction setting.</p>
+<p>This paper asks: how does <code>/autoresearch</code> mediate human-AI
+interaction through producer-consumer roles, stateful artifacts, and
+dual-loop research orchestration? We answer by proposing the
+<em>Stateful Value-Signal Research Loop</em>:</p>
+<div class="center">
+
+</div>
+<p>The framework’s central claim is that long-running AI skills should
+be designed not as autonomous black boxes or step-by-step command
+executors, but as governable stateful systems where humans provide value
+signals and oversight while AI systems maintain artifacts, produce
+evidence, synthesize meaning, and return decision surfaces.</p>
+<h1 id="related-work-and-theoretical-grounding">Related Work and
+Theoretical Grounding</h1>
+<p>This framework is not identical to any single prior tradition, but it
+is consistent with several established bodies of work.</p>
+<h4 id="mixed-initiative-interaction.">Mixed-initiative
+interaction.</h4>
+<p>Mixed-initiative interaction studies systems in which humans and
+computational agents share control over problem solving. Horvitz’s work
+on principles of mixed-initiative user interfaces provides an important
+reference point for designing systems where initiative can shift between
+human and machine participants <span class="citation"
+data-cites="horvitz1999mixedinitiative"></span>. The Stateful
+Value-Signal Research Loop applies this idea to long-running research
+tasks: humans hold initiative at the value, constraint, and governance
+layers, while the AI holds initiative at the routine evidence-production
+and synthesis layers.</p>
+<h4 id="provenance-and-traceability.">Provenance and traceability.</h4>
+<p>The W3C PROV family provides a vocabulary for representing provenance
+through entities, activities, agents, and relations such as generation,
+use, derivation, attribution, and association <span class="citation"
+data-cites="w3cprov2013overview w3cprov2013dm w3cprov2013o"></span>.
+This vocabulary supports the claim that research artifacts are not
+merely files. In a long-running AI workspace, artifacts such as
+protocols, results, findings, and reports are provenance-bearing
+objects.</p>
+<h4 id="ai-risk-management-and-human-oversight.">AI risk management and
+human oversight.</h4>
+<p>The NIST AI Risk Management Framework emphasizes governance, risk
+management, transparency, accountability, measurement, and
+socio-technical context <span class="citation"
+data-cites="nist2023airmf"></span>. This supports the need for progress
+reports as governance interfaces: a long-running AI skill should expose
+objective alignment, evidence, uncertainty, risk, and planned next
+actions so that human reviewers can monitor and steer the system.</p>
+<h4 id="distributed-cognition-and-cognitive-artifacts.">Distributed
+cognition and cognitive artifacts.</h4>
+<p>Distributed cognition treats cognition as distributed across people,
+tools, representations, and environments <span class="citation"
+data-cites="hutchins1995cognition"></span>. Norman’s work on cognitive
+artifacts explains how external representations transform cognitive
+tasks <span class="citation"
+data-cites="norman1991cognitiveartifacts"></span>. These ideas support
+the claim that the <code>/autoresearch</code> workspace is part of the
+cognitive system.</p>
+<h4 id="scientific-workflow-provenance.">Scientific workflow
+provenance.</h4>
+<p>Scientific workflow provenance research emphasizes the need to track
+data dependencies, execution context, parameters, outputs, and
+derivation histories <span class="citation"
+data-cites="davidson2008provenanceworkflows"></span>. This strengthens
+the framework’s claim that evidence loops need durable artifacts.</p>
+<h1 id="method-conceptual-analysis-of-autoresearch">Method: Conceptual
+Analysis of <code>/autoresearch</code></h1>
+<p>This work is a conceptual and design analysis rather than an
+empirical benchmark. We analyzed <code>/autoresearch</code> as a
+structured human-AI workflow and tested four hypotheses through artifact
+mapping, interaction-model comparison, loop-function mapping, and
+governance-interface analysis:</p>
+<ul>
+<li><p><strong>H1:</strong> Stateful artifacts are the core interaction
+medium.</p></li>
+<li><p><strong>H2:</strong> Human-AI collaboration is an asymmetric
+producer-consumer exchange.</p></li>
+<li><p><strong>H3:</strong> Dual-loop architecture separates evidence
+production from meaning production.</p></li>
+<li><p><strong>H4:</strong> Progress reports are the primary governance
+interface.</p></li>
+</ul>
+<h1 id="framework">Framework</h1>
+<h2 id="artifacts-as-consumer-interfaces">Artifacts as Consumer
+Interfaces</h2>
+<p>The first mechanism is artifact-mediated state.
+<code>/autoresearch</code> uses a file workspace that includes state,
+logs, findings, literature, experiments, human reports, and final paper
+outputs. These artifacts are not passive storage. They are consumer
+interfaces.</p>
+<div id="tab:artifacts">
+<table>
+<caption>Core artifacts in <code>/autoresearch</code> and their primary
+consumers.</caption>
+<thead>
+<tr>
+<th style="text-align: left;">Artifact</th>
+<th style="text-align: left;">Primary consumer</th>
+<th style="text-align: left;">Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>research-state.yaml</code></td>
+<td style="text-align: left;">AI</td>
+<td style="text-align: left;">Operational state and next actions</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>research-log.md</code></td>
+<td style="text-align: left;">AI + human auditor</td>
+<td style="text-align: left;">Decision timeline and traceability</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>findings.md</code></td>
+<td style="text-align: left;">AI + human</td>
+<td style="text-align: left;">Accumulated understanding</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>literature/</code></td>
+<td style="text-align: left;">AI + paper writer</td>
+<td style="text-align: left;">External grounding</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>experiments/</code></td>
+<td style="text-align: left;">AI + reviewer</td>
+<td style="text-align: left;">Protocols, evidence, results,
+analysis</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>to_human/</code></td>
+<td style="text-align: left;">Human</td>
+<td style="text-align: left;">Governance and steering interface</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>paper/</code></td>
+<td style="text-align: left;">Publication audience</td>
+<td style="text-align: left;">Final contribution packaging</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The design principle is: do not design files first; design consumers
+first.</p>
+<h2 id="human-ai-collaboration-as-value-signal-exchange">Human-AI
+Collaboration as Value-Signal Exchange</h2>
+<p>The second mechanism is value-signal exchange. Humans primarily
+produce objectives, audiences, success criteria, constraints, risk
+boundaries, and feedback cadence. AI systems primarily produce state
+updates, evidence packages, synthesis, decision options, and governance
+reports. This model explains why pure command execution, pure
+delegation, and stepwise approval flows are insufficient: value-signal
+exchange preserves AI autonomy while retaining human direction-setting
+authority.</p>
+<h2
+id="separating-evidence-production-from-meaning-production">Separating
+Evidence Production from Meaning Production</h2>
+<p>The third mechanism is epistemic loop separation.
+<code>/autoresearch</code> separates fast inner loops from slower outer
+loops. The inner loop produces protocols, measurements, and local
+analyses. The outer loop produces patterns, mechanisms, and direction
+decisions. The human loop updates value signals, constraints, and
+priorities.</p>
+<h2 id="progress-reports-as-governance-interfaces">Progress Reports as
+Governance Interfaces</h2>
+<p>The fourth mechanism is report-based governance. Progress reports are
+not summaries for convenience. They are the primary human governance
+interface. A useful report answers whether the project is still solving
+the right problem, what has been learned, what evidence supports the
+claims, what remains uncertain, whether to deepen, broaden, pivot, or
+conclude, and what the AI will do next if the human does not
+intervene.</p>
+<h1 id="design-implications">Design Implications</h1>
+<p>Long-running AI skills should explicitly design artifact schemas,
+separate control by value from control by procedure, treat synthesis as
+a required operation, and make reports decision-oriented. A report that
+lists actions without claims, evidence, uncertainty, or options is an
+activity dump rather than a governance interface.</p>
+<h1 id="failure-modes">Failure Modes</h1>
+<div id="tab:failures">
+<table>
+<caption>Common failure modes for long-running AI skills and
+corresponding fixes.</caption>
+<thead>
+<tr>
+<th style="text-align: left;">Failure mode</th>
+<th style="text-align: left;">Symptom</th>
+<th style="text-align: left;">Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Output without value</td>
+<td style="text-align: left;">many artifacts, unclear usefulness</td>
+<td style="text-align: left;">clarify objective and success
+criteria</td>
+</tr>
+<tr>
+<td style="text-align: left;">Activity without understanding</td>
+<td style="text-align: left;">many experiments, thin findings</td>
+<td style="text-align: left;">force synthesis and direction
+decisions</td>
+</tr>
+<tr>
+<td style="text-align: left;">Framework without grounding</td>
+<td style="text-align: left;">elegant narrative, little evidence</td>
+<td style="text-align: left;">add protocols, cases, measurements</td>
+</tr>
+<tr>
+<td style="text-align: left;">Human bottleneck</td>
+<td style="text-align: left;">frequent small approvals</td>
+<td style="text-align: left;">reserve approval for high-risk
+decisions</td>
+</tr>
+<tr>
+<td style="text-align: left;">AI drift</td>
+<td style="text-align: left;">work diverges from goal</td>
+<td style="text-align: left;">generate report and update priorities</td>
+</tr>
+<tr>
+<td style="text-align: left;">False certainty</td>
+<td style="text-align: left;">speculative claims look confirmed</td>
+<td style="text-align: left;">label evidence type and confidence</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="limitations">Limitations</h1>
+<p>This paper is a conceptual analysis of one AI skill rather than a
+controlled empirical study. The framework is grounded in artifact
+mapping, workflow analysis, and external theoretical alignment, but it
+has not yet been validated across multiple independently designed
+long-running AI systems. The citation package includes strengthened
+metadata, but several claims still require quote-level verification and
+page-specific support before academic submission.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p><code>/autoresearch</code> demonstrates that advanced AI skills
+should not be understood merely as better prompts or larger tool
+collections. They can be designed as governable stateful systems. In
+such systems, humans define value, AI produces evidence, artifacts
+preserve state, outer loops generate meaning, reports enable governance,
+and feedback updates direction. The Stateful Value-Signal Research Loop
+provides a reusable vocabulary for designing AI agents that continue
+making autonomous progress while remaining inspectable, steerable, and
+accountable to human goals.</p>
