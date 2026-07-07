@@ -292,6 +292,18 @@ The draft converts the whitepaper into a formal paper-style structure:
 
 The project is now ready for review as a paper-style draft. Further work should focus on quote-level citation verification, LaTeX conversion, or final project conclusion.
 
+## 2026-07-07 — Chinese formal paper draft created
+
+Created `paper/formal-paper-draft-zh.md`.
+
+### Result
+
+The project now includes a Chinese formal-paper-style draft in addition to the Chinese methodology article, citation-aware whitepaper, and English formal paper draft.
+
+### Next direction
+
+Review the Chinese formal paper draft, then either convert to LaTeX / target venue format or mark the project concluded.
+
 ### Limitation
 
 Entries are candidate references, not final citation-ready references. They require metadata and content verification before formal academic submission.

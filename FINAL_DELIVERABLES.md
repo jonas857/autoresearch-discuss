@@ -28,7 +28,11 @@ Local workspace: `D:/AI/skill拆解`
    - `paper/formal-paper-draft.md`
    - Paper-style version with abstract, related work, framework, design implications, limitations, and references pointer.
 
-6. **Reusable framework template**
+6. **Chinese formal paper draft**
+   - `paper/formal-paper-draft-zh.md`
+   - Chinese formal-paper-style version with abstract, related work, framework, implications, limitations, and references pointer.
+
+7. **Reusable framework template**
    - `src/long_running_ai_skill_framework.md`
    - Generalized design pattern for long-running AI skills.
 
@@ -37,11 +41,11 @@ Local workspace: `D:/AI/skill拆解`
    - `paper/citation-verification-checklist.md`
    - Candidate references and verification workflow for formal paper development.
 
-8. **Findings synthesis**
+10. **Findings synthesis**
    - `findings.md`
    - Living research understanding and lessons.
 
-9. **Research state and log**
+11. **Research state and log**
    - `research-state.yaml`
    - `research-log.md`
 

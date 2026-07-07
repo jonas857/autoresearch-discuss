@@ -42,10 +42,10 @@ hypotheses:
     status: "supported_by_governance_mapping"
     prediction: "Human control is most effective when exercised through low-frequency, high-level review of synthesized reports rather than step-by-step command."
 
-current_focus: "Formal paper draft created; next step is review, optional LaTeX conversion, or project conclusion."
+current_focus: "Chinese formal paper draft created; next step is review, optional LaTeX conversion, or project conclusion."
 next_actions:
-  - "Review paper/formal-paper-draft.md for structure and argument quality."
-  - "Optionally convert formal draft into LaTeX with a target venue style."
+  - "Review paper/formal-paper-draft-zh.md for Chinese formal-paper quality."
+  - "Optionally convert formal drafts into LaTeX with a target venue style."
   - "Optionally perform quote-level citation verification and add in-text page references."
   - "If no further validation is needed, mark project concluded."
 
