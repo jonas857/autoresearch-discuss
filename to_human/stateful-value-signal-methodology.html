@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>状态化价值信号研究循环：长期 AI 技能方法论</title>
+  <style>
+    :root{
+      --bg:#f6f7fb;--ink:#111827;--muted:#64748b;--card:#ffffff;--line:#e5e7eb;
+      --indigo:#4f46e5;--blue:#2563eb;--cyan:#0891b2;--green:#16a34a;--amber:#d97706;--red:#dc2626;
+      --soft-indigo:#eef2ff;--soft-blue:#eff6ff;--soft-green:#f0fdf4;--soft-amber:#fffbeb;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#eef2ff 0,#f8fafc 360px);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",Arial,sans-serif;line-height:1.72}
+    main{max-width:1200px;margin:0 auto;padding:44px 26px 88px}
+    .hero{position:relative;overflow:hidden;border-radius:34px;padding:52px 48px;color:white;background:radial-gradient(circle at 10% 10%,#a5b4fc 0,#4f46e5 34%,#111827 100%);box-shadow:0 30px 80px rgba(15,23,42,.25)}
+    .hero:after{content:"";position:absolute;right:-120px;top:-120px;width:360px;height:360px;border-radius:999px;background:rgba(255,255,255,.12)}
+    .hero h1{margin:0 0 14px;font-size:44px;line-height:1.12;letter-spacing:-.04em}
+    .hero p{margin:0;max-width:900px;color:#dbeafe;font-size:18px}.pill{display:inline-block;margin:22px 8px 0 0;padding:7px 13px;border-radius:999px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);font-size:13px;font-weight:700}
+    h2{margin:46px 0 16px;font-size:30px;letter-spacing:-.02em}h3{margin:0 0 10px;font-size:19px}.lead{font-size:18px;color:#334155}.muted{color:var(--muted)}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:24px 26px;margin:16px 0;box-shadow:0 14px 40px rgba(15,23,42,.06)}
+    .grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+    .stage{border-top:6px solid var(--indigo)}.stage:nth-child(2){border-top-color:var(--blue)}.stage:nth-child(3){border-top-color:var(--cyan)}.stage:nth-child(4){border-top-color:var(--green)}.stage:nth-child(5){border-top-color:var(--amber)}
+    .num{font-size:34px;font-weight:900;color:var(--indigo);line-height:1}.tag{display:inline-block;padding:4px 9px;border-radius:999px;background:var(--soft-indigo);color:#3730a3;font-size:12px;font-weight:800;margin-bottom:10px}
+    .flow{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px;padding:26px}.node{padding:13px 15px;border-radius:16px;background:var(--soft-indigo);color:#312e81;font-weight:900;border:1px solid #c7d2fe}.arrow{font-size:24px;color:#94a3b8;font-weight:900}
+    table{width:100%;border-collapse:collapse;background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 12px 34px rgba(15,23,42,.05)}th,td{border-bottom:1px solid var(--line);padding:13px 14px;text-align:left;vertical-align:top}th{background:var(--soft-indigo);color:#1e1b4b}tr:last-child td{border-bottom:none}
+    pre{background:#0f172a;color:#dbeafe;border-radius:20px;padding:22px;overflow-x:auto;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;line-height:1.6}.quote{font-size:21px;font-weight:850;color:#1e1b4b}.ok{border-left:6px solid var(--green);background:var(--soft-green)}.warn{border-left:6px solid var(--amber);background:var(--soft-amber)}
+    .checklist li{margin:8px 0}.footer{margin-top:52px;color:#64748b;text-align:center;font-size:14px}
+    @media(max-width:1000px){.grid,.grid2,.grid3{grid-template-columns:1fr}.hero{padding:34px 24px}.hero h1{font-size:32px}.arrow{display:none}}
+  </style>
+</head>
+<body>
+<main>
+  <section class="hero">
+    <h1>状态化价值信号研究循环</h1>
+    <p>一套用于设计长期 AI 技能的方法论：用人类价值信号定义方向，用状态化 artifact 保存上下文，用内循环生产证据，用外循环生成意义，用治理报告让人类低成本控制 AI 自主过程。</p>
+    <span class="pill">方法论介绍</span><span class="pill">长期 AI 技能</span><span class="pill">Human-AI Governance</span><span class="pill">/autoresearch Case</span>
+  </section>
+
+  <h2>1. 一句话定义</h2>
+  <div class="card ok"><p class="quote">长期 AI 技能不是“更长的聊天”，而是一个可治理的状态化协作系统：人类提供价值信号，AI 维护状态并生产证据，报告把控制权周期性还给人类。</p></div>
+
+  <h2>2. 核心循环</h2>
+  <div class="card flow">
+    <span class="node">人类价值信号</span><span class="arrow">→</span>
+    <span class="node">Artifact 状态</span><span class="arrow">→</span>
+    <span class="node">内循环证据</span><span class="arrow">→</span>
+    <span class="node">外循环意义</span><span class="arrow">→</span>
+    <span class="node">治理报告</span><span class="arrow">→</span>
+    <span class="node">更新价值信号</span>
+  </div>
+
+  <h2>3. 五层方法论结构</h2>
+  <div class="grid">
+    <div class="card stage"><div class="tag">Layer 1</div><h3>Human Value Signal</h3><p>定义目标、受众、成功标准、约束和风险边界。</p></div>
+    <div class="card stage"><div class="tag">Layer 2</div><h3>Artifact-Mediated State</h3><p>用 state、log、findings、reports 让任务可恢复、可审计。</p></div>
+    <div class="card stage"><div class="tag">Layer 3</div><h3>Inner Loop Evidence</h3><p>通过搜索、实验、分析和记录持续减少不确定性。</p></div>
+    <div class="card stage"><div class="tag">Layer 4</div><h3>Outer Loop Meaning</h3><p>把多轮证据综合为模式、机制、假设和方向判断。</p></div>
+    <div class="card stage"><div class="tag">Layer 5</div><h3>Governance Report</h3><p>把内部状态压缩为人类可以做决策的治理界面。</p></div>
+  </div>
+
+  <h2>4. 适用场景</h2>
+  <div class="grid3">
+    <div class="card"><h3>长期研究</h3><p>文献验证、假设迭代、实验记录、论文草稿。</p></div>
+    <div class="card"><h3>复杂开发</h3><p>多模块设计、长期 refactor、质量审查、架构演进。</p></div>
+    <div class="card"><h3>产品探索</h3><p>用户研究、竞品分析、需求收敛、方案评估。</p></div>
+    <div class="card"><h3>数据科学</h3><p>实验追踪、特征比较、模型评估、结论解释。</p></div>
+    <div class="card"><h3>安全审计</h3><p>证据保全、风险分级、复查路径、治理报告。</p></div>
+    <div class="card"><h3>知识管理</h3><p>企业知识沉淀、决策支持、文档体系和可追溯结论。</p></div>
+  </div>
+
+  <h2>5. 设计模板</h2>
+  <div class="grid2">
+    <div class="card">
+      <h3>价值信号模板</h3>
+      <pre>objective:
+audience:
+success_criteria:
+constraints:
+risk_boundaries:
+feedback_cadence:</pre>
+    </div>
+    <div class="card">
+      <h3>Artifact 设计模板</h3>
+      <pre>producer:
+consumer:
+compression_level:
+decision_enabled:
+failure_if_missing:
+update_cadence:</pre>
+    </div>
+    <div class="card">
+      <h3>内循环模板</h3>
+      <pre>inner_loop:
+  input:
+  action:
+  evidence_output:
+  sanity_check:
+  state_update:</pre>
+    </div>
+    <div class="card">
+      <h3>外循环模板</h3>
+      <pre>outer_loop:
+  review_inputs:
+  synthesis_method:
+  hypothesis_update:
+  direction_decision:
+  report_trigger:</pre>
+    </div>
+  </div>
+
+  <h2>6. 人机分工：Producer-Consumer 视角</h2>
+  <table>
+    <thead><tr><th>角色</th><th>主要生产</th><th>主要消费</th><th>控制方式</th></tr></thead>
+    <tbody>
+      <tr><td>人类</td><td>目标、价值判断、成功标准、约束、风险边界、反馈</td><td>压缩后的意义、风险提示、决策选项、最终交付物</td><td>通过价值函数和治理报告控制方向</td></tr>
+      <tr><td>AI</td><td>证据、状态更新、artifact、综合、报告、交付物</td><td>人类价值信号、既有状态、外部信息、工具反馈</td><td>在约束内自主执行高频低层动作</td></tr>
+    </tbody>
+  </table>
+
+  <h2>7. 治理报告应该回答什么？</h2>
+  <div class="card">
+    <ol class="checklist">
+      <li>我们是否仍在解决正确问题？</li>
+      <li>当前真正学到了什么？</li>
+      <li>证据是什么，置信度如何？</li>
+      <li>哪些结论仍不确定？</li>
+      <li>风险在哪里？</li>
+      <li>下一步应该深化、拓展、转向还是收束？</li>
+      <li>如果人类不干预，AI 下一步会做什么？</li>
+      <li>现在最需要人类提供什么反馈？</li>
+    </ol>
+  </div>
+
+  <h2>8. 诊断矩阵</h2>
+  <table>
+    <thead><tr><th>失败模式</th><th>症状</th><th>根因</th><th>修复</th></tr></thead>
+    <tbody>
+      <tr><td>输出无价值</td><td>内容很多，但不知道有什么用</td><td>价值信号弱</td><td>明确目标、受众、成功标准</td></tr>
+      <tr><td>有活动无理解</td><td>搜索/实验很多，findings 很薄</td><td>外循环弱</td><td>强制综合、模式聚类、方向判断</td></tr>
+      <tr><td>有框架无证据</td><td>叙事完整但支撑不足</td><td>内循环弱</td><td>补 protocol、证据、案例、引用</td></tr>
+      <tr><td>人类瓶颈</td><td>每一步都要审批</td><td>步骤控制过强</td><td>只审批高风险或不可逆动作</td></tr>
+      <tr><td>AI 漂移</td><td>越做越偏</td><td>报告少或价值信号过期</td><td>生成治理报告，刷新目标和约束</td></tr>
+      <tr><td>虚假确定性</td><td>弱证据被写成强结论</td><td>缺少 confidence 和 evidence type</td><td>标注证据类型、置信度和不确定性</td></tr>
+      <tr><td>Artifact 噪音</td><td>文件很多但没人读</td><td>未定义消费者</td><td>删除、合并或重新定义 artifact</td></tr>
+    </tbody>
+  </table>
+
+  <h2>9. 外部理论依据</h2>
+  <div class="grid2">
+    <div class="card"><h3>Mixed-Initiative Interaction</h3><p>支持按层级分配 initiative：人类控制价值和治理，AI 控制常规证据生产和综合。</p></div>
+    <div class="card"><h3>W3C PROV</h3><p>支持把 artifact 理解为可追溯的 entity，与 activity、agent、derivation 等关系相连。</p></div>
+    <div class="card"><h3>NIST AI RMF 1.0</h3><p>支持把报告理解为 governance、monitoring、risk communication 和 oversight 接口。</p></div>
+    <div class="card"><h3>Distributed Cognition</h3><p>支持 workspace-as-cognitive-system：文件、表示和报告共同参与认知过程。</p></div>
+  </div>
+
+  <h2>10. 最终判断</h2>
+  <div class="card warn"><p class="quote">如果说普通 AI 对话是在回答问题，那么长期 AI 技能的方法论目标是：把 AI 从一次性回答者，转化为可治理、可追溯、可持续积累理解的长期合作者。</p></div>
+
+  <p class="footer">Generated from the /autoresearch methodology project · Stateful Value-Signal Research Loop</p>
+</main>
+</body>
+</html>
